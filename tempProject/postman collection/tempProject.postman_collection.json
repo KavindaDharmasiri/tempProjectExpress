@@ -1,0 +1,401 @@
+{
+	"info": {
+		"_postman_id": "15c816fb-b4d7-4613-9695-0148b7d01f0e",
+		"name": "tempProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "get all user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "httpL/localhost:4000/users"
+					},
+					"response": []
+				},
+				{
+					"name": "post user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"U001\",\n    \"name\": \"gimhan\",\n    \"username\":\"gimhan\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "httpL/localhost:4000/users"
+					},
+					"response": []
+				},
+				{
+					"name": "update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"U001\",\r\n    \"name\": \"kavinda\",\r\n    \"username\":\"kavinda\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "httpL/localhost:4000/users"
+					},
+					"response": []
+				},
+				{
+					"name": "delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "httpL/localhost:4000/users?id=U001",
+							"host": [
+								"httpL"
+							],
+							"path": [
+								"localhost:4000",
+								"users"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "U001"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get One user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "httpL/localhost:4000/users?id=U001",
+							"host": [
+								"httpL"
+							],
+							"path": [
+								"localhost:4000",
+								"users"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "U001"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "item",
+			"item": [
+				{
+					"name": "get all item",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "httpL/localhost:4000/items"
+					},
+					"response": []
+				},
+				{
+					"name": "post item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"I001\",\n    \"name\": \"rice\",\n    \"price\":1000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "httpL/localhost:4000/items"
+					},
+					"response": []
+				},
+				{
+					"name": "update item",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"I001\",\r\n    \"name\": \"suger\",\r\n    \"price\":1000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "httpL/localhost:4000/items"
+					},
+					"response": []
+				},
+				{
+					"name": "delete item",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "httpL/localhost:4000/items?code=I001",
+							"host": [
+								"httpL"
+							],
+							"path": [
+								"localhost:4000",
+								"items"
+							],
+							"query": [
+								{
+									"key": "code",
+									"value": "I001"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get One item",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "httpL/localhost:4000/items?code=I001",
+							"host": [
+								"httpL"
+							],
+							"path": [
+								"localhost:4000",
+								"items"
+							],
+							"query": [
+								{
+									"key": "code",
+									"value": "I001"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "get all Order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "httpL/localhost:4000/orders"
+					},
+					"response": []
+				},
+				{
+					"name": "post Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"oId\": \"O001\",\n    \"itemCode\": \"I001\",\n    \"userId\":\"U001\",\n    \"qty\": 10,\n    \"price\": 1000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "httpL/localhost:4000/orders"
+					},
+					"response": []
+				},
+				{
+					"name": "update Order",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oId\": \"O001\",\r\n    \"itemCode\": \"I001\",\r\n    \"userId\":\"U001\",\r\n    \"qty\": 15,\r\n    \"price\": 1500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "httpL/localhost:4000/orderDetails"
+					},
+					"response": []
+				},
+				{
+					"name": "delete Order",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "httpL/localhost:4000/orders?oId=O001",
+							"host": [
+								"httpL"
+							],
+							"path": [
+								"localhost:4000",
+								"orders"
+							],
+							"query": [
+								{
+									"key": "oId",
+									"value": "O001"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get One Order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "httpL/localhost:4000/orders?oId=O001",
+							"host": [
+								"httpL"
+							],
+							"path": [
+								"localhost:4000",
+								"orders"
+							],
+							"query": [
+								{
+									"key": "oId",
+									"value": "O001"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OrderDetail",
+			"item": [
+				{
+					"name": "get all OrderDetails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "httpL/localhost:4000/orderDetails"
+					},
+					"response": []
+				},
+				{
+					"name": "post OrderDetail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"oId\": \"OD001\",\n    \"itemCode\": \"I001\",\n    \"userId\":\"U001\",\n    \"qty\": 10,\n    \"price\": 1000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "httpL/localhost:4000/orderDetails"
+					},
+					"response": []
+				},
+				{
+					"name": "update OrderDetail",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oId\": \"OD001\",\r\n    \"itemCode\": \"I001\",\r\n    \"userId\":\"U001\",\r\n    \"qty\": 15,\r\n    \"price\": 1500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "httpL/localhost:4000/orderDetails"
+					},
+					"response": []
+				},
+				{
+					"name": "delete OrderDetail",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "httpL/localhost:4000/orderDetails?oId=OD001",
+							"host": [
+								"httpL"
+							],
+							"path": [
+								"localhost:4000",
+								"orderDetails"
+							],
+							"query": [
+								{
+									"key": "oId",
+									"value": "OD001"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get One OrderDetail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "httpL/localhost:4000/orderDetails?oId=OD001",
+							"host": [
+								"httpL"
+							],
+							"path": [
+								"localhost:4000",
+								"orderDetails"
+							],
+							"query": [
+								{
+									"key": "oId",
+									"value": "OD001"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

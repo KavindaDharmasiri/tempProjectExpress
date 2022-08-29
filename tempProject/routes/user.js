@@ -63,7 +63,7 @@ router.put('/', (req, res) => {
     })
 })
 
-router.delete('/:id', (req, res) => {
+/*router.delete('/:id', (req, res) => {
     const id = req.params.id
     console.log(id)
 
@@ -75,7 +75,7 @@ router.delete('/:id', (req, res) => {
 
         res.send(row)
     })
-})
+})*/
 
 router.get('/:id', (req, res) => {
     const id = req.params.id

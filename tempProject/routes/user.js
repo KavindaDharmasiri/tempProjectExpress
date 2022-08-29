@@ -65,17 +65,15 @@ router.put('/', (req, res) => {
 
 router.delete('/:id', (req, res) => {
     const id = req.params.id
+    console.log(id)
+
 
     var query = "DELETE FROM users WHERE id=?";
 
-    connection.query(query, [id], (err, rows) => {
-        if (err) console.log(err);
+    connection.query(query, [id], (err, row) => {
+        if(err) console.log(err);
 
-        if (rows.affectedRows > 0) {
-            res.send({ 'message': 'user deleted' })
-        } else {
-            res.send({ 'message': 'user not found' })
-        }
+        res.send(row)
     })
 })
 

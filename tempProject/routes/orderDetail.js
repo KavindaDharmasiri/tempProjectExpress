@@ -47,6 +47,7 @@ router.post('/', (req, res) => {
 
 })
 
+
 router.put('/', (req, res) => {
     const oId = req.body.oId
     const itemCode = req.body.itemCode
@@ -56,30 +57,26 @@ router.put('/', (req, res) => {
 
     var query = "UPDATE orderDetails SET itemCode=?, userId=?, qty=?, price=? WHERE oId=?";
 
-    connection.query(query, [oId, itemCode, userId,qty,price], (err, rows) => {
-        if (err) console.log(err);
-
-        if (rows.affectedRows > 0) {
-            res.send({ 'message': 'order updated' })
+    connection.query(query, [ itemCode, userId,qty,price,oId], (err) => {
+        if (err) {
+            res.send({ 'message': 'duplicate entry' })
         } else {
-            res.send({ 'message': 'order not found' })
+            res.send({ 'message': 'order updated!' })
         }
     })
+
 })
 
 router.delete('/:oId', (req, res) => {
+    res.send( "fas")
     const oId = req.params.oId
 
     var query = "DELETE FROM orderDetails WHERE oId=?";
 
-    connection.query(query, [oId], (err, rows) => {
-        if (err) console.log(err);
+    connection.query(query, [oId], (err, row) => {
+        if(err) console.log(err);
 
-        if (rows.affectedRows > 0) {
-            res.send({ 'message': 'order deleted' })
-        } else {
-            res.send({ 'message': 'order not found' })
-        }
+        res.send(oId + "fas")
     })
 })
 

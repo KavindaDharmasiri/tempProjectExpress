@@ -56,7 +56,7 @@ router.put('/', (req, res) => {
 
     var query = "UPDATE orders SET itemCode=?, userId=?, qty=?, price=? WHERE oId=?";
 
-    connection.query(query, [oId, itemCode, userId,qty,price], (err, rows) => {
+    connection.query(query, [itemCode, userId,qty,price,oId], (err, rows) => {
         if (err) console.log(err);
 
         if (rows.affectedRows > 0) {

@@ -37,11 +37,11 @@ router.post('/', (req, res) => {
 
     var query = "INSERT INTO orderDetails (oId, itemCode, userId,qty,price) VALUES (?, ?, ?, ?, ?)";
 
-    connection.query(query, [oId, itemCode, userId,qty,price], (err) => {
+    connection.query(query, [oId, itemCode, userId, qty, price], (err) => {
         if (err) {
-            res.send({ 'message': 'duplicate entry' })
+            res.send({'message': 'duplicate entry'})
         } else {
-            res.send({ 'message': 'order created!' })
+            res.send({'message': 'order created!'})
         }
     })
 
@@ -57,11 +57,11 @@ router.put('/', (req, res) => {
 
     var query = "UPDATE orderDetails SET itemCode=?, userId=?, qty=?, price=? WHERE oId=?";
 
-    connection.query(query, [ itemCode, userId,qty,price,oId], (err) => {
+    connection.query(query, [itemCode, userId, qty, price, oId], (err) => {
         if (err) {
-            res.send({ 'message': 'duplicate entry' })
+            res.send({'message': 'duplicate entry'})
         } else {
-            res.send({ 'message': 'order updated!' })
+            res.send({'message': 'order updated!'})
         }
     })
 
@@ -76,9 +76,9 @@ router.delete('/', (req, res) => {
         if (err) console.log(err);
 
         if (rows.affectedRows > 0) {
-            res.send({ 'message': 'orderDetail deleted' })
+            res.send({'message': 'orderDetail deleted'})
         } else {
-            res.send({ 'message': 'orderDetail not found' })
+            res.send({'message': 'orderDetail not found'})
         }
     })
 })
@@ -89,7 +89,7 @@ router.get('/getOne', (req, res) => {
     var query = "SELECT * from orderDetails WHERE oId=?";
 
     connection.query(query, [oId], (err, row) => {
-        if(err) console.log(err);
+        if (err) console.log(err);
 
         res.send(row)
     })

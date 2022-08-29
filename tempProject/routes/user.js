@@ -37,9 +37,9 @@ router.post('/', (req, res) => {
 
     connection.query(query, [id, name, username], (err) => {
         if (err) {
-            res.send({ 'message': 'duplicate entry' })
+            res.send({'message': 'duplicate entry'})
         } else {
-            res.send({ 'message': 'user created!' })
+            res.send({'message': 'user created!'})
         }
     })
 
@@ -56,9 +56,9 @@ router.put('/', (req, res) => {
         if (err) console.log(err);
 
         if (rows.affectedRows > 0) {
-            res.send({ 'message': 'user updated' })
+            res.send({'message': 'user updated'})
         } else {
-            res.send({ 'message': 'user not found' })
+            res.send({'message': 'user not found'})
         }
     })
 })
@@ -72,9 +72,9 @@ router.delete('/', (req, res) => {
         if (err) console.log(err);
 
         if (rows.affectedRows > 0) {
-            res.send({ 'message': 'user deleted' })
+            res.send({'message': 'user deleted'})
         } else {
-            res.send({ 'message': 'user not found' })
+            res.send({'message': 'user not found'})
         }
     })
 })
@@ -85,7 +85,7 @@ router.get('/getOne', (req, res) => {
     var query = "SELECT * from users WHERE id=?";
 
     connection.query(query, [id], (err, row) => {
-        if(err) console.log(err);
+        if (err) console.log(err);
 
         res.send(row)
     })

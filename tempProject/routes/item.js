@@ -37,9 +37,9 @@ router.post('/', (req, res) => {
 
     connection.query(query, [code, name, price], (err) => {
         if (err) {
-            res.send({ 'message': 'duplicate entry' })
+            res.send({'message': 'duplicate entry'})
         } else {
-            res.send({ 'message': 'item created!' })
+            res.send({'message': 'item created!'})
         }
     })
 
@@ -56,9 +56,9 @@ router.put('/', (req, res) => {
         if (err) console.log(err);
 
         if (rows.affectedRows > 0) {
-            res.send({ 'message': 'item updated' })
+            res.send({'message': 'item updated'})
         } else {
-            res.send({ 'message': 'item not found' })
+            res.send({'message': 'item not found'})
         }
     })
 })
@@ -72,9 +72,9 @@ router.delete('/', (req, res) => {
         if (err) console.log(err);
 
         if (rows.affectedRows > 0) {
-            res.send({ 'message': 'item deleted' })
+            res.send({'message': 'item deleted'})
         } else {
-            res.send({ 'message': 'item not found' })
+            res.send({'message': 'item not found'})
         }
     })
 })
@@ -85,7 +85,7 @@ router.get('/getOne', (req, res) => {
     var query = "SELECT * from items WHERE code=?";
 
     connection.query(query, [code], (err, row) => {
-        if(err) console.log(err);
+        if (err) console.log(err);
 
         res.send(row)
     })

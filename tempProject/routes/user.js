@@ -63,22 +63,24 @@ router.put('/', (req, res) => {
     })
 })
 
-/*router.delete('/:id', (req, res) => {
-    const id = req.params.id
-    console.log(id)
-
+router.delete('/', (req, res) => {
+    const id = req.body.id
 
     var query = "DELETE FROM users WHERE id=?";
 
-    connection.query(query, [id], (err, row) => {
-        if(err) console.log(err);
+    connection.query(query, [id], (err, rows) => {
+        if (err) console.log(err);
 
-        res.send(row)
+        if (rows.affectedRows > 0) {
+            res.send({ 'message': 'user deleted' })
+        } else {
+            res.send({ 'message': 'user not found' })
+        }
     })
-})*/
+})
 
-router.get('/:id', (req, res) => {
-    const id = req.params.id
+router.get('/getOne', (req, res) => {
+    const id = req.body.id
 
     var query = "SELECT * from users WHERE id=?";
 

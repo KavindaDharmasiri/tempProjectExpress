@@ -59,32 +59,17 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": {
-							"raw": "httpL/localhost:4000/users?id=U001",
-							"host": [
-								"httpL"
-							],
-							"path": [
-								"localhost:4000",
-								"users"
-							],
-							"query": [
-								{
-									"key": "id",
-									"value": "U001"
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"U001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
 								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "get One user",
-					"request": {
-						"method": "GET",
-						"header": [],
+							}
+						},
 						"url": {
-							"raw": "http://localhost:4000/users?id=U001",
+							"raw": "http://localhost:4000/users",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -96,10 +81,32 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "U001"
+									"value": "U001",
+									"disabled": true
 								}
 							]
 						}
+					},
+					"response": []
+				},
+				{
+					"name": "get One user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"U001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/users/getOne"
 					},
 					"response": []
 				}
@@ -158,32 +165,17 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": {
-							"raw": "httpL/localhost:4000/items?code=I001",
-							"host": [
-								"httpL"
-							],
-							"path": [
-								"localhost:4000",
-								"items"
-							],
-							"query": [
-								{
-									"key": "code",
-									"value": "I001"
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\":\"I001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
 								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "get One item",
-					"request": {
-						"method": "GET",
-						"header": [],
+							}
+						},
 						"url": {
-							"raw": "http://localhost:4000/items?code=I001",
+							"raw": "http://localhost:4000/items",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -195,7 +187,46 @@
 							"query": [
 								{
 									"key": "code",
-									"value": "I001"
+									"value": "I001",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get One item",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\":\"I001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/items",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"items"
+							],
+							"query": [
+								{
+									"key": "code",
+									"value": "I001",
+									"disabled": true
 								}
 							]
 						}
@@ -257,47 +288,37 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": {
-							"raw": "httpL/localhost:4000/orders?oId=O001",
-							"host": [
-								"httpL"
-							],
-							"path": [
-								"localhost:4000",
-								"orders"
-							],
-							"query": [
-								{
-									"key": "oId",
-									"value": "O001"
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oId\":\"O001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
 								}
-							]
-						}
+							}
+						},
+						"url": "http://localhost:4000/orders"
 					},
 					"response": []
 				},
 				{
 					"name": "get One Order",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": {
-							"raw": "http://localhost:4000/orders?oId=O001",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "4000",
-							"path": [
-								"orders"
-							],
-							"query": [
-								{
-									"key": "oId",
-									"value": "O001"
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oId\":\"O001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
 								}
-							]
-						}
+							}
+						},
+						"url": "http://localhost:4000/orders/getOne"
 					},
 					"response": []
 				}
@@ -356,32 +377,17 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": {
-							"raw": "httpL/localhost:4000/orderDetails?oId=OD001",
-							"host": [
-								"httpL"
-							],
-							"path": [
-								"localhost:4000",
-								"orderDetails"
-							],
-							"query": [
-								{
-									"key": "oId",
-									"value": "OD001"
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oId\":\"OD001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
 								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "get One OrderDetail",
-					"request": {
-						"method": "GET",
-						"header": [],
+							}
+						},
 						"url": {
-							"raw": "http://localhost:4000/orderDetails?oId=OD001",
+							"raw": "http://localhost:4000/orderDetails",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -393,7 +399,47 @@
 							"query": [
 								{
 									"key": "oId",
-									"value": "OD001"
+									"value": "OD001",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get One OrderDetail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oId\":\"OD001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/orderDetails/getOne",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"orderDetails",
+								"getOne"
+							],
+							"query": [
+								{
+									"key": "oId",
+									"value": "OD001",
+									"disabled": true
 								}
 							]
 						}

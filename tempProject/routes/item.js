@@ -63,8 +63,8 @@ router.put('/', (req, res) => {
     })
 })
 
-router.delete('/:code', (req, res) => {
-    const code = req.params.code
+router.delete('/', (req, res) => {
+    const code = req.body.code
 
     var query = "DELETE FROM items WHERE code=?";
 
@@ -79,8 +79,8 @@ router.delete('/:code', (req, res) => {
     })
 })
 
-router.get('/:code', (req, res) => {
-    const code = req.params.code
+router.get('/getOne', (req, res) => {
+    const code = req.body.code
 
     var query = "SELECT * from items WHERE code=?";
 

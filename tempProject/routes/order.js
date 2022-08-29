@@ -67,8 +67,8 @@ router.put('/', (req, res) => {
     })
 })
 
-router.delete('/:oId', (req, res) => {
-    const oId = req.params.oId
+router.delete('/', (req, res) => {
+    const oId = req.body.oId
 
     var query = "DELETE FROM orders WHERE oId=?";
 
@@ -76,15 +76,15 @@ router.delete('/:oId', (req, res) => {
         if (err) console.log(err);
 
         if (rows.affectedRows > 0) {
-            res.send({ 'message': 'order deleted' })
+            res.send({ 'message': 'orders deleted' })
         } else {
-            res.send({ 'message': 'order not found' })
+            res.send({ 'message': 'orders not found' })
         }
     })
 })
 
-router.get('/:oId', (req, res) => {
-    const oId = req.params.oId
+router.get('/getOne', (req, res) => {
+    const oId = req.body.oId
 
     var query = "SELECT * from orders WHERE oId=?";
 

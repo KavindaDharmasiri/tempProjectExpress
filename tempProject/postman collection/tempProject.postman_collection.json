@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "15c816fb-b4d7-4613-9695-0148b7d01f0e",
+		"_postman_id": "6c18a061-e649-498a-a339-e7e87afb55cd",
 		"name": "tempProject",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "18059844"
 	},
 	"item": [
 		{
@@ -13,7 +14,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "httpL/localhost:4000/users"
+						"url": "http://localhost:4000/users"
 					},
 					"response": []
 				},
@@ -31,7 +32,7 @@
 								}
 							}
 						},
-						"url": "httpL/localhost:4000/users"
+						"url": "http://localhost:4000/users"
 					},
 					"response": []
 				},
@@ -49,7 +50,7 @@
 								}
 							}
 						},
-						"url": "httpL/localhost:4000/users"
+						"url": "http://localhost:4000/users"
 					},
 					"response": []
 				},
@@ -83,12 +84,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "httpL/localhost:4000/users?id=U001",
+							"raw": "http://localhost:4000/users?id=U001",
+							"protocol": "http",
 							"host": [
-								"httpL"
+								"localhost"
 							],
+							"port": "4000",
 							"path": [
-								"localhost:4000",
 								"users"
 							],
 							"query": [
@@ -111,7 +113,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "httpL/localhost:4000/items"
+						"url": "http://localhost:4000/items"
 					},
 					"response": []
 				},
@@ -129,7 +131,7 @@
 								}
 							}
 						},
-						"url": "httpL/localhost:4000/items"
+						"url": "http://localhost:4000/items"
 					},
 					"response": []
 				},
@@ -147,7 +149,7 @@
 								}
 							}
 						},
-						"url": "httpL/localhost:4000/items"
+						"url": "http://localhost:4000/items"
 					},
 					"response": []
 				},
@@ -181,12 +183,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "httpL/localhost:4000/items?code=I001",
+							"raw": "http://localhost:4000/items?code=I001",
+							"protocol": "http",
 							"host": [
-								"httpL"
+								"localhost"
 							],
+							"port": "4000",
 							"path": [
-								"localhost:4000",
 								"items"
 							],
 							"query": [
@@ -209,7 +212,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "httpL/localhost:4000/orders"
+						"url": "http://localhost:4000/orders"
 					},
 					"response": []
 				},
@@ -227,7 +230,7 @@
 								}
 							}
 						},
-						"url": "httpL/localhost:4000/orders"
+						"url": "http://localhost:4000/orders"
 					},
 					"response": []
 				},
@@ -238,14 +241,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"oId\": \"O001\",\r\n    \"itemCode\": \"I001\",\r\n    \"userId\":\"U001\",\r\n    \"qty\": 15,\r\n    \"price\": 1500\r\n}",
+							"raw": "{\r\n    \"oId\": \"O001\",\r\n    \"itemCode\": \"I001\",\r\n    \"userId\":\"U001\",\r\n    \"qty\": 10,\r\n    \"price\": 1001\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "httpL/localhost:4000/orderDetails"
+						"url": "http://localhost:4000/orders"
 					},
 					"response": []
 				},
@@ -279,12 +282,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "httpL/localhost:4000/orders?oId=O001",
+							"raw": "http://localhost:4000/orders?oId=O001",
+							"protocol": "http",
 							"host": [
-								"httpL"
+								"localhost"
 							],
+							"port": "4000",
 							"path": [
-								"localhost:4000",
 								"orders"
 							],
 							"query": [
@@ -307,7 +311,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "httpL/localhost:4000/orderDetails"
+						"url": "http://localhost:4000/orderDetails"
 					},
 					"response": []
 				},
@@ -325,7 +329,7 @@
 								}
 							}
 						},
-						"url": "httpL/localhost:4000/orderDetails"
+						"url": "http://localhost:4000/orderDetails"
 					},
 					"response": []
 				},
@@ -336,14 +340,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"oId\": \"OD001\",\r\n    \"itemCode\": \"I001\",\r\n    \"userId\":\"U001\",\r\n    \"qty\": 15,\r\n    \"price\": 1500\r\n}",
+							"raw": "{\r\n    \"oId\": \"OD001\",\r\n    \"itemCode\": \"I001\",\r\n    \"userId\":\"U001\",\r\n    \"qty\": 15,\r\n    \"price\": 1000\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "httpL/localhost:4000/orderDetails"
+						"url": "http://localhost:4000/orderDetails"
 					},
 					"response": []
 				},
@@ -377,12 +381,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "httpL/localhost:4000/orderDetails?oId=OD001",
+							"raw": "http://localhost:4000/orderDetails?oId=OD001",
+							"protocol": "http",
 							"host": [
-								"httpL"
+								"localhost"
 							],
+							"port": "4000",
 							"path": [
-								"localhost:4000",
 								"orderDetails"
 							],
 							"query": [
